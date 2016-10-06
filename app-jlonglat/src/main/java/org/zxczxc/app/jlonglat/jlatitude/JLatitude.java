@@ -92,8 +92,10 @@ public class JLatitude extends JComponent implements LongLatFormatListener {
 	}
 
 	public void setNewLongLatFormat(LongLatFormat longLatFormat) {
-		System.out.println("Update to " + longLatFormat);
-		this.longLatFormat = longLatFormat;
+		if (longLatFormat != this.longLatFormat) {
+			System.out.println("Latitude - Update to " + longLatFormat);
+			this.longLatFormat = longLatFormat;
+		}			
 	}
 	
 }
